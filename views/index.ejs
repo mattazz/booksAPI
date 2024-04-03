@@ -8,6 +8,18 @@
 </head>
 <body>
     <h1>Books I like</h1>
-    <h2>Database: <%= database %></h2>
+    <div class="book-section">
+        <%- books.map(book => `
+        <hr>
+            <h2>${book.title}</h2>
+            <h3>Author: ${book.author}</h3>
+            <p>ISBN: ${book.isbn}</p>
+        <hr>
+        `).join('') %>
+    </div>
+    <form action="/search" method="get">
+        <input type="text" name="searchTitle" placeholder="Search for a book here">
+        <button type="submit">Search</button>
+    </form>
 </body>
 </html>
