@@ -9,8 +9,6 @@
 </head>
 
 <body>
-
-    <h1>Books I like</h1>
     <form action="/search" method="get" class="submitForm">
         <input type="text" name="searchTitle" placeholder="Search for a book here">
         <button id="searchButton" type="submit">Search Title</button>
@@ -25,6 +23,7 @@
                 <p>Year published: ${book.publish_year}</p>
                 <p>ISBN: ${book.isbn}</p>
                 <p><i>${book.first_sentence}</i></p>
+                <a class="book_cover" href="${book.image_link}"><img src="${book.image_link}" alt="${book.title}"></a>
                 <hr>
             </div>
             `).join('') %>
