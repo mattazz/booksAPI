@@ -39,7 +39,7 @@ app.use(express.static("public"))
 
 
 app.get('/', async (req, res) =>{
-    const result = await db.query('SELECT * from books') // get array of all books in DB
+    const result = await db.query('SELECT * from books ORDER BY id DESC') // get array of all books in DB
     let books = []
     result.rows.forEach((book) =>{
         books.push(book) // push each book into the books array

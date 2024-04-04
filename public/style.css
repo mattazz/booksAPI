@@ -33,9 +33,11 @@ body{
     text-align: center;
     transform: scale(1.0);
     transition: all 0.3s;
+    margin: 5px;
 }
 .book-element:hover{
     transform: scale(1.05);
+    margin: 20px;
     
 }
 
